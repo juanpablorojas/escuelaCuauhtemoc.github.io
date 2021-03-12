@@ -1,0 +1,76 @@
+<div class="main-content">
+    <h2>Registro de Pago</h2>
+    <p>Complete el formulario para registrar el pago.</p>
+    <div class="form-container">
+        <form class="example-form">
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let opt of nameOptions" [value]="opt">
+                            {{opt}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <input type="text" placeholder="Buscar alumno" aria-label="Number" matInput
+                        [matAutocomplete]="auto">
+                </mat-form-field>
+            </div>
+
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-label>Monto</mat-label>
+                    <input matInput type="number">
+                </mat-form-field>
+            </div>
+
+            <div class="form-item">
+                <mat-form-field>
+                    <mat-label>Fecha</mat-label>
+                    <input matInput [matDatepicker]="picker">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+            </div>
+
+            <div class="form-item">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Servicio / Concepto</mat-label>
+                    <mat-autocomplete #autos="matAutocomplete">
+                        <mat-option *ngFor="let option of options" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <input type="text" placeholder="Pick one" aria-label="Number" matInput
+                        [matAutocomplete]="autos">
+                </mat-form-field>
+            </div>
+
+            <div class="payment-method">
+                <button class="option center active" type="button" (click)="selectedOption(0)" #efectivo>
+                    <p>Efectivo</p>
+                </button>
+                <button class="option center" type="button" (click)="selectedOption(1)" #tarjeta>
+                    <p>Tarjeta</p>
+                </button>
+                <button class="option center" type="button" (click)="selectedOption(2)" #transferencia>
+                    <p>Transferencia</p>
+                </button>
+            </div>
+            <div *ngIf="selectedPayment != 0" class="payment-extras">
+                <mat-form-field>
+                    <mat-label>Id Referencia</mat-label>
+                    <input matInput type="number">
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Id Authorización</mat-label>
+                    <input matInput type="number">
+                </mat-form-field>
+            </div>
+            <div class="save-changes">
+                <button class="save-button" disabled>
+                    <span>Registrar pago</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

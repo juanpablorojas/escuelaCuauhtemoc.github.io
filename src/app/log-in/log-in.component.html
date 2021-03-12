@@ -1,0 +1,28 @@
+<div class="main-container">
+    <div class="background-canvas">
+      <div class="login-card">
+        <div class="container">
+          <div class="left-side">
+            <div class="content">
+             <div class="logo"></div>
+             <p>Colegio Cuauthémoc</p>
+            </div>
+          </div>
+          <div class="right-side">
+            <div class="main-title">
+              <h2 class="title">Iniciar Sesión</h2>
+            </div>
+            <div class="form-container">
+              <form action="">
+                <input type="text" (input)="verifyCredentials($event, 0)" placeholder="Correo electrónico">
+                <div class="password-container">
+                 <input type="password"  (input)="verifyCredentials($event, 1)" placeholder="Contraseña">
+                </div>
+                <button [routerLink]="['/main-page/register']" [disabled]="password.length < 8 ? true : false">Entrar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

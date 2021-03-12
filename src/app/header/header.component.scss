@@ -1,0 +1,102 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    h1, h2 {
+        font-size: 400;
+    }
+    padding: 0 55px;
+    display: flex;
+    flex-direction: row;
+    .menu {
+        flex-basis: 80%;
+        display: flex;
+        .logo {
+            flex-basis: 10%;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 25px;
+            }
+        }
+        .menu-items {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-basis: 80%;
+            align-items: center;
+            .menu-item {
+                font-weight: 200;
+                cursor: pointer;
+                color: #EBE8E4;
+                opacity: .8;
+                font-size: 1rem;
+                outline: none;
+                &.active {
+                    opacity: 1;
+                    color: white;
+                }
+                &:hover {
+                    color: white;
+                }
+            }
+        }
+    }
+    .user-section {
+        flex-basis: 20%;
+        display: flex;
+        .notifications {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-right: 1rem;
+            flex-basis: 10%;
+            img {
+                color: white;
+                height: 40px;
+                cursor: pointer;
+            }
+        }
+        .user-menu {
+            flex-basis: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            .user-image {
+                margin-right: 1rem;
+                img {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 25px;
+                }
+            }
+            .deploy-menu {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .user-name {
+                    color: white;
+
+                }
+                .arrow {
+                    cursor: pointer;
+                    margin-top: 5px;
+                    height: 1px;
+                    background: transparent;
+                    width: 1px;
+                    border-top: 5px solid white;
+                    border-left: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-right: 5px solid transparent;
+                }
+            }
+        }
+    }
+}
+.main-content {
+    padding: 15px 0;
+    min-height: 50px;
+    width: 100%;
+    background-color: rgba(255,147,0,1);
+}

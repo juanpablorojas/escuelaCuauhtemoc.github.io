@@ -1,0 +1,134 @@
+.main-container {
+    * {
+        font-family: Roboto;
+    }
+    height: 100%;
+    .background-canvas {
+        //background: linear-gradient(270deg, #68eac8, #000000);
+        background: linear-gradient(270deg, rgba(252,185,30,1) 0%, #fda60f 90%, rgba(255,147,0,1));
+        height: inherit;
+        display: flex;
+        background-size: 400%;
+        @keyframes anim {
+            0% {
+                background-position: 0 50%;
+            }
+            50% {
+                background-position: 50% 100%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+          }
+          animation: ease;
+          animation-name: anim;
+          animation-duration: 15s;
+          animation-iteration-count: infinite;
+    }
+    .login-card {
+        background-color: rgba($color: #fff, $alpha: 1);
+        margin: auto;
+        width: 60%;
+        border-radius: 10px;
+        box-shadow: 4px 2px 2px #ff9300;
+        max-width: 800px;
+        .container {
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            @media screen and (min-width: 920px) {
+                flex-direction: row;
+            }
+            .left-side {
+                flex-basis: 40%;
+                .logo {
+                    border-radius: 50%;
+                    background-image: url("../../assets/guerrero.jpg");
+                    height: 200px;
+                    width: 200px;
+                    background-repeat: no-repeat;
+                    box-shadow: 3px 3px gold;
+                    margin: 0 auto;    
+                    @media screen and (min-width: 992px) {
+                        margin-left: 0;
+                    }                
+                }
+                p {
+                    font-size: 20px;
+                    font-weight: 200;
+                    text-align: center;
+                    @media screen and (min-width: 992px) {
+                        text-align: left;
+                    }  
+                }
+            }
+            .right-side {
+                flex-basis: 60%;
+                .main-title {
+                    .title {
+                        font-weight: 200;
+                        text-align: center;
+                        color: #341F21;
+                    }
+                }
+                .form-container {
+                    text-align: center;
+                    margin-top: 34px;
+                    * {
+                        display: block;
+                    }
+                    form {
+                        input {
+                            font-weight: 200;
+                        }
+                        text-align: center;
+                        border: -4px;
+                        a {
+                            text-decoration: none;
+                        }
+                        button {
+                            font-weight: 200;
+                            width: 100%;
+                            margin-right: 0;
+                            margin-left: auto;
+                            font-size: 20px;
+                            padding: 5px 50px;
+                            background: white;
+                            color: orange;
+                            border-radius: 4px;
+                            border: 1px solid #341F21;
+                            cursor: pointer;
+                            outline: none;
+                            &:active {
+                                color: #341F21;
+                            }
+                            &:disabled {
+                                color: #9e9c9c;
+                                border-color: #9e9c9c;
+                            }
+                        }
+                        input {
+                            padding: 0;
+                            padding-bottom: 5px;
+                            font-size: 20px;
+                            border: none;
+                            border-bottom: 1px solid gold;
+                            outline: none;
+                            display: block;
+                            margin: 0 auto;
+                            width: 100%;
+                            &:last-of-type {
+                                margin-bottom: 2rem;
+                            }
+                            &:focus {
+                                transition: all ease 0.3s;
+                                border-bottom: 1px solid #341F21 ;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}

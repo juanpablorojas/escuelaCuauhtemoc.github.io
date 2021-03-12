@@ -1,0 +1,20 @@
+.main-content {
+    height: inherit;
+    background-color: rgb(245, 246, 248);
+    app-header {
+        margin-bottom: 1rem;
+    }
+    .main-card {
+        padding: 1rem;
+        background: white;
+        border-radius: 1rem;
+        background-color: rgb(245, 246, 248);
+        border: 1px solid white;
+        background-color: white;
+        //box-shadow: 1px 0px 5px rgba(255,147,0,1);
+    }
+
+    .container {
+        padding: 15px 55px;
+    }
+}
